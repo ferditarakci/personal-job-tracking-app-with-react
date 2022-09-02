@@ -33,6 +33,15 @@
 				}
 			}
 		}
+
+		.not-found {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: var(--pink);
+			text-align: center;
+		}
 	}
 
 	.priorities {

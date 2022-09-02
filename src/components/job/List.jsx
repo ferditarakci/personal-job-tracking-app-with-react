@@ -170,6 +170,12 @@ const JobList = () => {
 									</td>
 								</tr>
 							))}
+
+							{!jobs.length && (
+								<tr>
+									<td colspan="3" className="not-found">Job not found, add a new job!</td>
+								</tr>
+							)}
 						</tbody>
 					</table>
 				</div>
