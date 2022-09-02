@@ -1,0 +1,17 @@
+[
+	{
+		"id": 1,
+		"name": "Urgent",
+		"css_class": "urgent"
+	},
+	{
+		"id": 2,
+		"name": "Important",
+		"css_class": "important"
+	},
+	{
+		"id": 3,
+		"name": "Regular",
+		"css_class": "regular"
+	}
+]
