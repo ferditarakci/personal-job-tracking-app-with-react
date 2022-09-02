@@ -6,6 +6,9 @@ This app is built using ReactJS. The application pulls the priority list by maki
 ## Uygulama Tanımı (TR)
 Bu uygulama ReactJS kullanılarak oluşturulmuştur. Uygulama, basit bir API uç noktasına istekte bulunarak öncelik listesini çeker. Kaydedilen işler localStorage'da saklanır.
 
+https://todo.ferditarakci.com.tr \
+https://personal-job-tracking-app-with-react.vercel.app
+
 <br>
 
 ------
