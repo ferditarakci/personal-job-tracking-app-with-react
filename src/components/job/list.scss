@@ -162,8 +162,20 @@ body.swal2-toast-shown .swal2-container {
     color: var(--black);
 }
 
+.swal2-html-container {
+	margin: 0;
+
+	.container {
+		min-width: 0;
+	}
+}
+
 .swal-custom-btn {
-	width: 160px;
+	width: 100px;
+
+	@media (min-width: 576px) {
+		width: 160px;
+	}
 
 	&.swal-cancel {
 		color: rgba(black, .5);

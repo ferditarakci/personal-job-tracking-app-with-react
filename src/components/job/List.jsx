@@ -27,7 +27,7 @@ const JobList = () => {
 		buttonsStyling: false,
 		customClass: {
 			cancelButton: 'swal-custom-btn swal-cancel btn btn-lg',
-			confirmButton: 'swal-custom-btn swal-approve btn btn-lg ms-5'
+			confirmButton: 'swal-custom-btn swal-approve btn btn-lg ms-3 ms-sm-5'
 		}
 	})
 
@@ -56,7 +56,6 @@ const JobList = () => {
 		)
 
 		customSwal.fire({
-			width: 560,
 			title: 'Job Edit',
 			html: SwalContent,
 			showConfirmButton: true,
@@ -173,7 +172,7 @@ const JobList = () => {
 
 							{!jobs.length && (
 								<tr>
-									<td colspan="3" className="not-found">Job not found, add a new job!</td>
+									<td colSpan="3" className="not-found">Job not found, add a new job!</td>
 								</tr>
 							)}
 						</tbody>
