@@ -6,8 +6,14 @@ This app is built using ReactJS. The application pulls the priority list by maki
 ## Uygulama Tanımı (TR)
 Bu uygulama ReactJS kullanılarak oluşturulmuştur. Uygulama, basit bir API uç noktasına istekte bulunarak öncelik listesini çeker. Kaydedilen işler localStorage'da saklanır.
 
-https://todo.ferditarakci.com.tr \
-https://personal-job-tracking-app-with-react.vercel.app
+## Deployment
+This project is automatically imported into the production environment with Vercel.
+
+Bu proje Vercel ile otomatik olarak üretim ortamına aktarılır. (TR)
+<br><br>
+
+<a href="https://todo.ferditarakci.com.tr" target="_blank" title="Personal Job Tracking Application">https://todo.ferditarakci.com.tr</a>\
+<a href="https://personal-job-tracking-app-with-react.vercel.app" target="_blank" title="Personal Job Tracking Application">https://personal-job-tracking-app-with-react.vercel.app</a>
 
 <br>
 
