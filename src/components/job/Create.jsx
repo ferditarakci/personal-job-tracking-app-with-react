@@ -1,13 +1,10 @@
 import React, { useContext, useState } from 'react'
-import SweetAlert from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import Swal from '../../utils/SweetAlert'
 import { PrioritiesContext } from '../../contexts/PrioritiesContext'
 import { JobContext } from '../../contexts/JobContext'
 import './create.scss'
 
 const JobCreate = () => {
-
-	const Swal = withReactContent(SweetAlert)
 
 	const { priorities } = useContext(PrioritiesContext)
 	const { jobs, setJobs } = useContext(JobContext)
