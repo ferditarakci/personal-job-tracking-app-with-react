@@ -87,6 +87,10 @@ const JobCreate = () => {
 
 			setJobs(newJobs)
 
+			// From gönderildikten sonra giriş değerlerini boşaltıyoruz
+			setJobName("")
+			setJobPriority("")
+
 			Toast.fire({
 				icon: 'success',
 				title: 'Job added!'
@@ -114,11 +118,11 @@ const JobCreate = () => {
 						</div>
 						<div className="col-12 col-sm-6 col-md-6 col-lg-7 mt-3 mt-sm-0">
 							<label htmlFor="name">Job Name</label>
-							<input onKeyUp={(e) => formControl(e)} name="name" id="name" data-testid="createJobName" type="text" className="form-control mt-1" required />
+							<input onChange={(e) => formControl(e)} value={jobName} name="name" id="name" data-testid="createJobName" type="text" className="form-control mt-1" required />
 						</div>
 						<div className="col-12 col-sm-3 col-md-4 col-lg-3 mt-3 mt-sm-0">
 							<label htmlFor="priority">Job Priority</label>
-							<select onChange={(e) => formControl(e)} name="priority" id="priority" data-testid="createJobPriority" className="form-control mt-1" required>
+							<select onChange={(e) => formControl(e)} value={jobPriority} name="priority" id="priority" data-testid="createJobPriority" className="form-control mt-1" required>
 								<option value="" data-testid="select-option">Choose</option>
 								{priorities.map(el => (<option value={el.id} key={el.id} data-testid="select-option">{el.name}</option>))}
 							</select>
