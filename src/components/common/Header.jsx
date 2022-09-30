@@ -1,13 +1,13 @@
 import React from 'react'
-import './header.scss'
+import styles from './styles/header.module.scss'
 
 const Header = () => {
 	return (
-		<header className="header">
+		<header className={styles.wrapper}>
 			<div className="container">
 				<div className="row pt-4 pb-2">
 					<div className="col-6">
-						<h1 className="logo">
+						<h1 className={styles.logo}>
 							<a href={`${process.env.PUBLIC_URL}/`}>LOGO</a>
 						</h1>
 					</div>
