@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
-import Swal, { Toast } from '../../utils/SweetAlert'
+import { Toast } from '../../utils/SweetAlert'
 import PrioritiesContext from '../../contexts/PrioritiesContext'
 import JobContext from '../../contexts/JobContext'
 import styles from './styles/job-create.module.scss'
@@ -100,7 +100,7 @@ const JobCreate = () => {
 			setCreateJob(initialFormValues)
 		}
 		return () => setAddedItem(false)
-	}, [addedItem])
+	}, [addedItem, initialFormValues])
 
 	return (
 		<section className={styles.wrapper}>

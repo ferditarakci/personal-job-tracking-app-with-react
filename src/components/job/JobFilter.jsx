@@ -1,9 +1,9 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState, useEffect, useCallback } from 'react'
 import PrioritiesContext from '../../contexts/PrioritiesContext'
 import JobContext from '../../contexts/JobContext'
 import styles from './styles/job-filter.module.scss'
 
-const Filter = () => {
+const JobFilter = () => {
 	const { priorities } = useContext(PrioritiesContext)
 	const { setJobs, getJobs, initialFormValues } = useContext(JobContext)
 
@@ -14,7 +14,7 @@ const Filter = () => {
 		setFilter({ ...filter, [name]: (name === "priority" && value !== "" ? parseInt(value) : value.trim()) })
 	}
 
-	const filterJobs = async filter => {
+	const filterJobs = useCallback(async filter => {
 		try {
 			const filteredName = data => data.filter(({ name }) => name.toString().toLowerCase().includes(filter.name))
 			const filteredPriority = data => data.filter(({ priority }) => priority === filter.priority)
@@ -35,11 +35,11 @@ const Filter = () => {
 			console.log("An error has occurred!")
 			console.log(error)
 		}
-	}
+	}, [getJobs, setJobs])
 
 	useEffect(() => {
 		filterJobs(filter)
-	}, [filter])
+	}, [filter, filterJobs])
 
 	return (
 		<div className={styles.wrapper}>
@@ -58,4 +58,4 @@ const Filter = () => {
 	)
 }
 
-export default React.memo(Filter)
+export default React.memo(JobFilter)

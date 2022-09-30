@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { CustomSwal } from '../../utils/SweetAlert'
 import PrioritiesContext from '../../contexts/PrioritiesContext'
 import JobContext from '../../contexts/JobContext'
